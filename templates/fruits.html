@@ -1,0 +1,16 @@
+{% for i in fruit%}
+
+<div class="product-div">
+
+    
+    <img class="pimg" src="{{i.image}}">
+    <p class="p-name">{{i.name|title}}</p>
+    <p class="p-des">{{i.description}}</p>
+    <p class="p-price">{{i.price}}</p>
+           
+</div>
+
+{% endfor%}
+<div>
+
+</div>

@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block links%}
+<link rel="stylesheet" href="{% static 'css/categories.css'%}">
+{% endblock%}
+{% block content%}
+
+<div class="cdiv">
+    <p class="p1"><a href="{% url 'fruits'%}">Fruits</a></p>
+    <p class="p2"><a href="{% url 'veggies'%}">Veggies</a></p>
+</div>
+{%endblock%}

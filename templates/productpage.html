@@ -1,0 +1,48 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block links%}
+<link rel="stylesheet" href="{% static 'css/product.css'%}">
+{% endblock%}
+
+{% block content%}
+<div class="phead">
+    <h1 class="ph1">Product list</h1>
+    <form class="form-inline" method="get" action="{% url 'products' %}">
+        
+        <input class="form-control mr-sm-2 w-25"  type="search" name="search_this">
+        <input class="btn btn-outline-success m-1" type="submit" value="search">
+    </form>
+</div>
+
+
+<div class="mdiv">
+    {% for i in prod%}
+    <div class="product-div">
+        <div class="ied">
+            <img class="pimg" src="{{i.image}}">
+        </div>
+        <div class="ued">
+           <div class="hued">
+            <p class="p-name">{{i.name|title}}</p>
+           </div>
+           <p>Description</p>
+            <p class="p-des">{{i.breif}}</p>
+            <div class="price">
+                <p>Price::</p>
+                <p class="p-price">{{i.price}}</p>
+            </div>
+            {% if user.is_superuser%}
+            <div class="btn-div">
+
+                <button class="btn btn-success"><a href="{% url 'update' i.id%}">update</a></button>
+                <button class="btn btn-danger"><a href="{% url 'delete' i.id%}">Delete</a></button>
+            </div>
+            {% endif %}
+        </div>
+    
+    </div>
+    
+{% endfor%}
+</div>
+
+{%endblock%}

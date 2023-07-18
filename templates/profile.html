@@ -1,0 +1,51 @@
+
+
+{% extends 'base.html'%}
+{% load static%}
+{% block links%}
+<link rel="stylesheet" href="{% static 'css/profile.css'%}">
+{% endblock%}
+{% block content%}
+<div class="container pcon">
+    <div class="det">
+        <div class="noidea">
+
+        <h1>{{profile|title}}</h1>
+        
+            <img class="pimg" src="{{profile.proimg}}">
+            <h3 class="phn">{{profile|title}}</h3>
+            <div class="det1"> 
+                <h6>{{profile.name}}</h6>
+                <h6> {{profile.email}}</h6>
+               
+            </div>
+            <div class="det2">{{profile.bio}}</div>
+        
+                <button class='btn btn-primary'><a href="{% url 'uprofile' profile.id%}">edit</a></button>
+            
+        </div>
+      
+        
+    </div>
+    <div class="container-fluid post-div">
+    {% for i in post%}
+    
+        <div class="nediv">
+            <div class="con">
+                <img class="nimg" src="{{i.newsimg}}">
+                <p>{{i.name}}</p>
+                <p>{{i.des}}</p>
+            </div>
+           
+            <div>
+                <button class="btn btn-secondary"><a href="{% url 'upnews' i.id%}">edit</a></button>
+            <button class="btn btn-danger"><a href="{% url 'dltnwz' i.id%}">delete</a></button>
+            </div> 
+            
+        </div>
+        
+    
+    {% endfor%}
+</div>
+</div>
+{%endblock%}

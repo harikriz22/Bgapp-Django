@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block links%}
+<link rel="stylesheet" href="{% static 'css/addnews.css'%}">
+{% endblock%}
+{% block content%}
+
+<div class="container fo-main">
+    <h1>Add your news</h1>
+    <form class="form-group xls" action="" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form}}
+        <input class="btn btn-primary" type="submit" value="add">
+    </form>
+</div>
+{%endblock%}

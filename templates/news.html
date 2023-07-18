@@ -1,0 +1,20 @@
+
+{% extends 'base.html'%}
+{% load static%}
+{% block links%}
+
+{% endblock%}
+{% block content%}
+{% for i in vn%}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{i.newsimg}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{i.name}}</h5>
+      <p class="card-text">{{i.des}}</p>
+      <p class="card-text">{{i.datez}}</p>
+      <a href="#" class="btn btn-primary">details</a>
+    </div>
+  </div>
+  {%endfor%}
+
+  {%endblock%}

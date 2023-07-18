@@ -1,0 +1,14 @@
+.xls{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.fo-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: antiquewhite;
+    min-height: 500px;
+}

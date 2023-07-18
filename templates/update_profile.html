@@ -1,0 +1,13 @@
+
+    {% extends 'base.html'%}
+    {% load static%}
+    {% block links%}
+    {% endblock%}
+    {% block content%}
+    <h1>pro update</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form}}
+        <input type="submit" value="update">
+        </form>
+    {%endblock%}

@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block links%}
+<link rel="stylesheet" href="{% static 'css/register.css'%}">
+{% endblock%}
+{% block content%}
+
+<p class="r2l"><a href="{% url 'login' %}">login</a></p></div> 
+<div class="regdiv">
+    <form class="fd" method="post">
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+        {% for i in form%}
+        <div>
+            {{i.label_tag}}
+            {{i}}
+            {{i.errors}}
+        </div>
+        {% endfor %}
+        <input type="submit" value="submit">
+    </form>
+    <style>
+        .fd{
+            display: flex;
+            flex-direction: column;
+
+        }
+        input{
+            width: 120px;
+        }
+    </style>
+</div>
+
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock%}

@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load static%}
+{%block links%}
+
+<link rel="stylesheet" href="{% static 'css/index.css'%}">
+{%endblock%}
+{% block content%}
+<div class="d1">
+    <h1>Welcome to Grocery Shop</h1>
+    <p>
+        find a wide variey of fruits and veggies for you.
+        we can provide you with fresh and healthy freggies
+        we prefer quality over all.
+    </p>
+    <img class="inage" src="{% static 'images/fv2.jpg'%}">
+</div>
+{% endblock%}

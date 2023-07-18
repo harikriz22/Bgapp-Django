@@ -1,0 +1,30 @@
+.addp-div{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    gap: 10px;
+    background-color: antiquewhite;
+}
+.ahead{
+   color: rgb(41, 112, 67); ;
+}
+.addform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ao{
+    border: 10px solid rgb(14, 139, 58);
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+   gap: 15px;
+}
+.mt{
+    display:hidden;
+    height: 100px;
+}

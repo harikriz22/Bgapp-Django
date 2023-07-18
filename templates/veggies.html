@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{%load static%}
+
+{%block links%}
+<link rel="stylesheet" href="{% static 'css/veggies.css'%}"/>
+{%endblock%}
+{%block content%}
+<h1 class="headh">veggies</h1>
+
+<div class="container-fluid co">
+        
+
+  
+<div class="card-contain">
+           
+    {% for i in veg%}
+    <!-- <div class="product-div"> 
+        <img class="pimg" src="{{i.image}}">
+        <a href="{% url 'pdetails' i.id%}"><p class="p-name">{{i.name|title}}</p></a>
+        <p class="p-price">Price:{{i.price}}</p>
+    </div> -->
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{i.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{i.name|title}}</h5>
+          <p class="card-text">Price:{{i.price}}</p>
+          <a href="{% url 'pdetails' i.id%}" class="btn btn-primary">view</a>
+        </div>
+      </div>
+    
+    {% endfor%}
+    </div>
+</div>
+    {%endblock%}
+
+
+

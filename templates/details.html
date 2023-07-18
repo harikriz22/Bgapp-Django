@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block links%}
+<link rel="stylesheet" href="{% static 'css/details.css'%}">
+{% endblock%}
+
+{%block content%}
+<div class="container det">
+  
+    <div class="w-50 p-4 pnm"><p>{{pro.name|title}}</p></div>
+    <img class="detimg" src="/{{pro.image}}">
+  <div class="w-100 panda">   
+      <div class="pric">
+        <p>price :</p>
+        <p>{{pro.price}}</p>
+      </div>
+      <button type="button" class="btn btn-warning">Add to cart</button>
+  </div>  
+
+    <p class="descp">{{pro.description}}</p>
+</div>
+{%endblock%}

@@ -1,0 +1,19 @@
+.mdi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+.lform{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid grey;
+    background-color: rgb(192, 206, 211);
+    min-height: 200px;
+}
+.msgs{
+    list-style: none;
+    color: red;
+    text-shadow: 1px 1px rgb(80, 2, 2);
+}

@@ -1,0 +1,46 @@
+.cdiv{
+
+    min-height: 500px;
+   
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  
+    
+}
+a{
+    text-decoration: none;
+    
+    color: rgb(46, 43, 226);
+}
+.p1{  
+    width: 40%;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid rgb(111, 9, 9);}
+    
+
+.p2{
+    width: 40%;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid grey; 
+}  
+.p1:hover{
+    width: 41%;
+    background-color: rgb(240, 150, 168)  ;
+    color: rgb(120, 26, 186);
+}
+.p2:hover{
+    width: 41%;
+    background-color: rgb(152, 237, 129);
+    color: black;
+}
+
+a:hover{
+    color: black;
+}

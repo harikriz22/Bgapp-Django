@@ -1,0 +1,47 @@
+.det{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px
+  
+
+}
+.detimg{
+    width: 80%;
+    height: 800px;
+    border: 2px solid greenyellow;
+    box-shadow: 15px 5px 7px  rgb(153, 225, 202);
+
+    
+
+}
+.descp{
+    width: 100%;
+    text-align: center;
+
+}
+.pnm{
+    text-align: center;
+    border: 3px solid rgb(64, 204, 228);
+    border-top: 0px;
+    border-left: 0;
+    font-size: 27px;
+    font-weight: 700;
+    color: rgb(5, 39, 5);
+    text-shadow: 2px 2px violet;
+    box-shadow: 6px 5px 2px  rgb(237, 247, 168);
+}
+.pric{
+    display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    color: blueviolet;
+    border-bottom: .5px solid rgb(38, 37, 25) ;
+}
+.panda{
+    display: flex;
+    justify-content: space-between;
+
+}
